@@ -14,17 +14,11 @@ yarn
 
 yarn build
 
-ls -al dist
-cat dist/vanilla-component.min.json
+cat dist/vanilla-component.min.js
 
 git config --global user.email "creaticoding@gmail.com"
 git config --global user.name "CreatiCoding"
 git clone --depth=1 "https://$GITHUB_TOKEN@github.com/creco-org/cdn.creco.me.git" ../cdn.creco.me
-
-ls -al ..
-ls -al
-
-ls -al ../cdn.creco.me
 
 if [ -d "../cdn.creco.me/$packageName/$version" ]; then
   echo "../cdn.creco.me/$packageName/$version"
@@ -36,8 +30,8 @@ else
   ls -al ../cdn.creco.me/$packageName
   ls -al ../cdn.creco.me/$packageName/$version
 
-#   deployDate=$(date -R)
-#   git add -A
-#   git commit -m "deploy($packageName): $version($commitId) $deployDate"
-#   git push origin main
+  deployDate=$(date -R)
+  git add -A
+  git commit -m "deploy($packageName): $version($commitId) $deployDate"
+  git push origin main
 fi
