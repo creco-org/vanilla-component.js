@@ -20,15 +20,15 @@ git config --global user.email "creaticoding@gmail.com"
 git config --global user.name "CreatiCoding"
 git clone --depth=1 "https://$GITHUB_TOKEN@github.com/creco-org/cdn.creco.me.git" ../cdn.creco.me
 
-if [ -d "../cdn.creco.me/$packageName/$version" ]; then
-  echo "../cdn.creco.me/$packageName/$version"
+if [ -d "../cdn.creco.me/packages/$packageName/$version" ]; then
+  echo "../cdn.creco.me/packages/$packageName/$version"
   exit 1
 else
-  mkdir -p "../cdn.creco.me/$packageName/$version"
-  cp -a ./dist/. ../cdn.creco.me/$packageName/$version
-  ls -al ../cdn.creco.me
-  ls -al ../cdn.creco.me/$packageName
-  ls -al ../cdn.creco.me/$packageName/$version
+  mkdir -p "../cdn.creco.me/packages/$packageName/$version"
+  cp -a ./dist/. ../cdn.creco.me/packages/$packageName/$version
+  ls -al ../cdn.creco.me/packages/
+  ls -al ../cdn.creco.me/packages/$packageName
+  ls -al ../cdn.creco.me/packages/$packageName/$version
 
   cd ../cdn.creco.me
 
