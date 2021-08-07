@@ -8,6 +8,18 @@ echo $workspace
 echo $commitId
 echo $version
 
+yarn build
+
+ls -al dist
+cat dist/vanilla-component.min.json
+
+git config --global user.email "creaticoding@gmail.com"
+git config --global user.name "CreatiCoding"
+git clone --depth=1 "https://$GITHUB_TOKEN@github.com/creco-org/cdn.creco.me.git" ../cdn.creco.me
+
+ls -al ..
+ls -al
+
 # for i in ${!serviceList[@]}; do
 #   service=${serviceList[$i]}
 #   domain=$(cut -d'/' -f1 <<<"$service")
