@@ -30,6 +30,8 @@ else
   ls -al ../cdn.creco.me/$packageName
   ls -al ../cdn.creco.me/$packageName/$version
 
+  cd ../cdn.creco.me
+
   deployDate=$(date -R)
   git add -A
   git commit -m "deploy($packageName): $version($commitId) $deployDate"
