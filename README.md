@@ -8,7 +8,7 @@ It's just template library with vanilla JavaScript.
 
 # features
 
-[x] fetch template files and rendering to target DOM
+- [x] fetch template files and rendering to target DOM
 
 # Example
 
